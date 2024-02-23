@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --text-color: white;
+  --bg-url: url(https://media.discordapp.net/attachments/1208790509259198495/1209920247180558426/71071a5691d1b91a73291ee67eda47d5.png?ex=65e8ad0a&is=65d6380a&hm=9b95197694949017f7ed37bcad2ef9c55ac86c3cee0ff063e76d3327125c5e9d&=&format=webp&quality=lossless&width=263&height=468);
+  --stroke-color: white;
+  --surface-color: rgba(226, 225, 225, 0.664);
+  --highlight-color: rgba(226, 225, 225, 0.664);
+  --switch-bg-url: url(./assets/moon-stars.svg);
+}
+
+.light {
+  --text-color: #bdabaa;
+  --bg-url: url(https://media.discordapp.net/attachments/1208790509259198495/1210307712194314290/923acf4189c9ddbc2e0ade93e1e5886e.png?ex=65ea15e5&is=65d7a0e5&hm=e85736f86e31ab3e320829cfec8379bbcebcfdab0ab3cb06f390e9c669af91ae&=&format=webp&quality=lossless&width=248&height=468);
+  --stroke-color: rgb(211, 189, 189);
+  --surface-color: rgba(255, 255, 255, 0.432);
+  --surface-color-hover: rgba(236, 228, 228, 0.699);
+  --switch-bg-url: url(./assets/sun.svg);
+}
+
+body {
+  background: var(--bg-url) repeat top center;
+  ''height: 100vh;
+}
+
+body * {
+  font-family: "Alice", serif;
+  color: var(--text-color);
+}
+
+#container {
+  height: 712px;
+  width: 360px;
+  margin: 56px auto 0px;
+  padding: 0 24px;
+}
+
+/* profile */
+
+#profile {
+  text-align: center;
+  padding: 24px;
+}
+#profile img {
+  width: 100px;
+  margin: auto;
+}
+
+#profile p {
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 8px;
+}
+
+/* switch */
+
+#switch {
+  position: relative;
+  width: 64px;
+  margin: 4px auto;
+}
+
+#switch button {
+  width: 32px;
+  height: 32px;
+  background: rgb(255, 255, 255) var(--switch-bg-url) no-repeat center;
+  border: 0;
+  border-radius: 50%;
+
+  top: 50%;
+  left: 0;
+  position: absolute;
+  z-index: 1;
+  transform: translateY(-50%);
+
+  animation: slide-back 0.4s;
+}
+
+#switch button:hover {
+  outline: 8px solid var(--highlight-color);
+}
+
+.light #switch button {
+  animation: slide-in 0.4s forwards;
+}
+
+#switch span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 9999px;
+}
+
+/* links - lista */
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  gap: 16px;
+}
+
+ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 24px;
+
+  background-color: var(--surface-color);
+  border-radius: 8px;
+  border: 1px solid var(--stroke-color);
+  backdrop-filter: blur (4px);
+  -webkit-backdrop-filter: blur (4px);
+  text-decoration: none;
+
+  transition: all 0.5s;
+}
+
+ul li a:hover {
+  background-color: var(--surface-color-hover);
+  border: 1px solid var(--text-color);
+}
+
+/* social links */
+#social-links {
+  display: flex;
+  padding: 24px 0;
+  font-size: 24px;
+  justify-content: center;
+}
+
+#social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  transition: background 0.5s;
+  border-radius: 50%;
+}
+
+#social-links a:hover {
+  background: var(--highlight-color);
+  padding: 16px;
+}
+footer {
+  padding: 24px 0;
+  text-align: center;
+}
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-back {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
+  }
+}
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(https://media.discordapp.net/attachments/1208790509259198495/1209920247180558426/71071a5691d1b91a73291ee67eda47d5.png?ex=65e8ad0a&is=65d6380a&hm=9b95197694949017f7ed37bcad2ef9c55ac86c3cee0ff063e76d3327125c5e9d&=&format=webp&quality=lossless&width=263&height=468);
+  }
+  .light {
+    --bg-url: url(https://media.discordapp.net/attachments/1208790509259198495/1210307712194314290/923acf4189c9ddbc2e0ade93e1e5886e.png?ex=65ea15e5&is=65d7a0e5&hm=e85736f86e31ab3e320829cfec8379bbcebcfdab0ab3cb06f390e9c669af91ae&=&format=webp&quality=lossless&width=248&height=468);
+  }
+}
