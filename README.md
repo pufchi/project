@@ -31,7 +31,7 @@ Esse projeto foi desenvolvido com:
 
 ## Licença ♡
 
-Por se tratar de uma atividade educacional, não incluí uma licença para uso externo ou distribuição (MIT)
+Por se tratar de uma atividade educacional, não incluí uma licença para uso externo ou distribuição (MIT) 
 
 
 
