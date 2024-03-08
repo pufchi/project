@@ -11,7 +11,7 @@ As técnicas e conceitos apresentados nos vídeos e materiais do curso foram apl
 
 
 
-![prévia](https://media.discordapp.net/attachments/1208790509259198495/1210314277068734484/banner_-_projeto_rocketseat.png?ex=65ea1c02&is=65d7a702&hm=889e14c0aa0832591011681da9a96528832fc89adb95a2543bcadd8008b37ee4&=&format=webp&quality=lossless&width=832&height=468)
+![prévia](banner_projeto_rocketseat.png)
 
 
 ## Tecnologias ♡
